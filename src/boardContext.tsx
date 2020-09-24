@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice} from '@reduxjs/toolkit';
 import {RootState} from "./store";
 
 interface AppState {
@@ -15,8 +15,8 @@ export const slice = createSlice({
     name: 'app',
     initialState,
     reducers: {
-        changeBoard (state, action: PayloadAction<string[][]>) {
-            state.board = action.payload;
+        changeBoard: state => {
+
         },
     }
 });

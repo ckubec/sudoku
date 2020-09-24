@@ -2,11 +2,11 @@
  * Solving the board we have entered
  * @param board is the 3 dimensional array of input values
  */
-import React from "react";
 
 export function solveSudoku(board:any) {
-    solve(board)
-    return visualRepresentation(board);
+    let temp = board;
+    solve(temp);
+    return temp;
 };
 
 /**
@@ -88,25 +88,4 @@ function solve (theBoard:any) {
         }
     }
     return false
-}
-
-/**
- * Getting the visual representation to display the numbers 9x9
- * @param theBoard
- */
-function visualRepresentation(theBoard:any) {
-    let displayBoardRows = [];
-
-    for(let i = 0; i<9; i++) {
-        displayBoardRows.push(theBoard[i].map((value: any) => <div className={"item"}>{value}</div>));
-    }
-
-    let displayColumn = [];
-    displayColumn.push(displayBoardRows.map((value:any) => <div className={"row"}>{value}</div>));
-
-    return (
-        <div className={"board"}>
-            {displayColumn}
-        </div>
-    );
 }
