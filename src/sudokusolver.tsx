@@ -67,7 +67,7 @@ function findEmpty (theBoard:[][]) {
  */
 function solve (theBoard:any) {
     const currentPosition = findEmpty(theBoard);
-    //If board is full let us break out
+    //If board is full/non existent let us break out
     if(currentPosition === null) {
         return true
     }

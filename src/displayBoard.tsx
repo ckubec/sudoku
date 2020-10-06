@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {useSelector} from "react-redux";
 import {selectBoard} from "./boardContext";
 import {solveSudoku} from "./sudokusolver";
-import {Container, Button, FormText} from "react-bootstrap";
 
 
 export function DisplayBoard() {
@@ -14,7 +13,7 @@ export function DisplayBoard() {
             <h1 className={"title"}>Sudoku Solver</h1>
             {visualRepresentation(board)}
             <div className={"buttonhome"}>
-                <Button variant="primary" size="lg" onClick={solve} >Submit</Button>
+                <button onClick={solve} >Submit</button>
             </div>
         </>
     );
@@ -25,24 +24,21 @@ export function DisplayBoard() {
     }
 }
 
-
-
 function visualRepresentation(theBoard:any) {
     let displayBoardRows = [];
 
     for(let i = 0; i<9; i++) {
-        displayBoardRows.push(theBoard[i].map((value: any) => <FormText className={"item"}>{value}</FormText>));
+        displayBoardRows.push(theBoard[i].map((value: any) => <div className={"item"}>{value}</div>));
     }
 
     let displayColumn = [];
-    displayColumn.push(displayBoardRows.map((value:any) => <FormText className={"row"}>{value}</FormText>));
+    displayColumn.push(displayBoardRows.map((value:any) => <div className={"row"}>{value}</div>));
 
     return (
-        <Container>
+        <div className={"container"}>
             {displayColumn}
-        </Container>
+        </div>
     );
 }
-
 
 export default DisplayBoard;
