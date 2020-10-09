@@ -12,9 +12,7 @@ export function DisplayBoard() {
         <>
             <h1 className={"title"}>Sudoku Solver</h1>
             {visualRepresentation(board)}
-            <div className={"buttonhome"}>
-                <button onClick={solve} >Submit</button>
-            </div>
+            <button onClick={solve} >Submit</button>
         </>
     );
 

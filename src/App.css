@@ -1,33 +1,33 @@
-.App-header {
+body {
   background-color: #282c34;
-  min-height: 100vh;
-  display: grid;
+}
+
+.App-header {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  align-items: center;
   color: white;
 }
 
 .container {
-  display: grid;
-}
-
-.buttonhome {
-  align-content: center;
-  display: grid;
-  height: fit-content;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
 button {
-  min-width: 25px;
-  min-height: 25px;
+  display: flex;
+  justify-content: center;
   padding: 1rem;
   margin: 0 auto;
-  text-align: center;
-  align-items: center;
 }
 
 h1 {
-  text-align: center;
+  display: flex;
+  align-self: center;
   font-size: 4rem;
+  margin: unset;
 }
 
 .App-link {
@@ -35,14 +35,11 @@ h1 {
 }
 
 form {
-  /*padding: unset;*/
-  /*width: content-box;*/
+  padding: unset;
 }
 
 .row {
-  /*display: grid;*/
-  min-width: 40px;
-  min-height: 30px;
+  display: grid;
   flex-direction: row;
   text-align: center;
 }
@@ -50,6 +47,5 @@ form {
 .item {
   font-size: medium;
   border: black solid;
-  border-bottom: unset;
-  padding: 1rem;
+  padding: 1.5rem;
 }
