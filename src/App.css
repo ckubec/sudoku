@@ -44,7 +44,12 @@ form {
   text-align: center;
 }
 
-.item {
+button.item {
+  padding: unset;
+  color: aliceblue;
+}
+
+.MuiButton-label {
   font-size: medium;
   border: black solid;
   padding: 1.5rem;
