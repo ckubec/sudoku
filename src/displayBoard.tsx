@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useSelector} from "react-redux";
 import {selectBoard} from "./boardContext";
 import {solveSudoku} from "./sudokusolver";
-import {Button} from "@material-ui/core";
+import {Button, Container} from "@material-ui/core";
 
 
 export function DisplayBoard() {
@@ -25,18 +25,19 @@ export function DisplayBoard() {
 
 function visualRepresentation(theBoard:any) {
     let displayBoardRows = [];
+    let idNum = 0;
 
     for(let i = 0; i<9; i++) {
-        displayBoardRows.push(theBoard[i].map((value: any) => <Button variant={"outlined"} className={"item"}>{value}</Button>));
+        displayBoardRows.push(theBoard[i].map((value: any) => <Button variant={"outlined"} className={"item"} key={idNum++}>{value}</Button>));
     }
 
     let displayColumn = [];
     displayColumn.push(displayBoardRows.map((value:any) => <div className={"row"}>{value}</div>));
 
     return (
-        <div className={"container"}>
+        <Container className={"container"} maxWidth={"xl"}>
             {displayColumn}
-        </div>
+        </Container>
     );
 }
 

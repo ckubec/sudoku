@@ -2,6 +2,11 @@ body {
   background-color: #282c34;
 }
 
+div.root {
+  display: flex;
+  align-items: center;
+}
+
 .App-header {
   display: flex;
   flex-flow: column;
@@ -10,10 +15,8 @@ body {
   color: white;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
+div.container {
+  color: white;
 }
 
 button {
@@ -39,14 +42,14 @@ form {
 }
 
 .row {
-  display: grid;
-  flex-direction: row;
-  text-align: center;
+  display: flex;
 }
 
 button.item {
   padding: unset;
   color: aliceblue;
+  border: unset;
+  flex-basis: 20%;
 }
 
 .MuiButton-label {

@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.css';
 import DisplayBoard from "./displayBoard";
+import {Container} from "@material-ui/core";
 
 function App() {
+    const style = {
+        display: 'flex',
+        flexFlow: 'column',
+        color: "white",
+    }
   return (
-    <div className="App">
-      <header className="App-header">
+      <Container maxWidth={"xl"} style={style}>
           <DisplayBoard />
-      </header>
-    </div>
+      </Container>
   );
 }
 
